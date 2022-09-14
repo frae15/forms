@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oii</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--Container que vai abrigar todo o formulário --> 
+  <div id="container">
+    <h1>Realize seu login</h1>
+    <!--Formulário né -->
+    <form id="register-form">
+                       <!--Campos do formulário-->
+      <!--To usando essa classe pra poder reutilizar ela dps...
+      A classe campos box vai ser a classe dos campos do formulário
+    que ira ocupar toda a largura da página-->
+      <div class="campos">
+        <!--A Label aqui é basicamente um título para um input, no input
+        o name tem que ser igual o for do name-->
+        <label for="name">Usuário ou Email</label>
+        <input type="text" name="name" id="name" placeholder="Insira o usuário ou seu e-mail" data-min-length="2" data-email-validate>
+      </div>
+      <!--O type é password porque é pra mostrar os asteristicos e bolinhas
+      pra não ficar visível a senha do usuário-->
+      <div class="campos">
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" placeholder="Insira sua senha" data-password-validate data-required>
+      </div>
+      <div>
+      <div class="campos">
+        <input type="submit" id="btn-submit" value="Login">
+      </div>
+    </form>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
+

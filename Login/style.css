@@ -1,0 +1,107 @@
+/* Css que vai servir pra todo projeto */
+* {
+  margin: 0;
+  padding: 0;
+  /*Colocando isso pra n atrapalhar o layout pq normalmente os inputs passam a margem da borda ficando um pouco maior do limite da largura ai acaba atrapalhando o layout */
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  color: #000000;
+  border: none;
+}
+
+input, label {
+  /*Colocando display block para cada um representar uma linha, pra n ficar um do lado do outro */
+  display: block;
+  /*Colocando o outline pra tirar a borda que fica sobre os campos do forms */
+  outline: none;
+  width: 100%;
+}
+
+/*Todos os links vão ter a cor que eu defini ali */
+a {
+  color: #6b00e6;
+}
+/*O corpo do site vai ter um padding-top de 20vh, isso serve pra jogar o forms pra baixo */
+body {
+  padding-top: 20vh; /*20vh = 20% da tela */
+  background-image: url('Sun.jpg');
+  /*Vai fazer a imagem ficar do tamanho da tela pra aparecer tudo */
+  background-size: cover;
+}
+
+/* Agora vou mexer mais no formulario em sí */
+#container {
+  width: 550px;
+  margin-left: auto;
+  /*To usando pra centralizar na horizontal o container */
+  margin-right: auto;
+  /*Definindo a cor de fundo como branca */
+  background-color: #FFF;
+  /*Definição do raio da borda dos cantos */
+  border-radius: 30px;
+  /*Vai ser o espaçamento interno do forms*/
+  padding: 25px;
+}
+/*Isso é nada demais, to só estilizando o texto que defini la no html  */
+#container h1 {
+  /*Deixando o texto alinhado ao centro */
+  text-align: center;
+  /*Definindo uma distância entre os campos do formulario e o texto */
+  margin-bottom: 25px;
+}
+
+
+form {
+  display: flex;
+  /*Esse flex-wrap vai servir para alinhar os elementos da forma que eu to adicionando no formulário */
+  flex-wrap: wrap;
+}
+
+.campos {
+  /*Usando esse flex pra definir como o campos do forms vai ser posicionado no espaço disponível
+   dentro do container. Vai ter 1 de grow(Define a proporção com que um item deve crescer caso 
+   seja necessário.), 1 de shrink(define a proporção com que um item deve encolher caso seja necessário)
+  e 100% de largura */
+  flex: 1 1 100%;
+}
+
+/*Estilizando texto */
+label {
+  /*Fonte em negrito */
+  font-weight: bold;
+  /*Definindo o tamanho da fonte em 8 em relação ao tamanho do elemento raiz */
+  font-size: .8rem;
+}
+
+
+input {
+  /*Definindo as linhas do texto */
+  border-bottom: 2px solid #000000;
+  /*padding de 10px pra afastar o texto do input das bordas dele */
+  padding: 10px;
+  font-size: .9rem;
+  /*Essa margin vai afastar um input do outro */
+  margin-bottom: 30px;
+}
+
+/*Quando alguel clicar no input ou seja der um foco nele */
+input:focus {
+  /*Vai exibir essa cor */
+  border-color: #6b00e6;
+}
+
+/*Peguei o botão de submit la do Registrar e trouxe o type dele entre colchetes para dar aquele
+tapa no visual */
+input[type="submit"] {
+  /*Cor de fundo do botão */
+  background-color: #6b00e6;
+  /*Cor do texto do botão */
+  color: #FFF;
+  /*Não vai ter borda */
+  border: none;
+  /*Vai ter um border radius pra dar um aspecto arredondado*/
+  border-radius: 20px;
+  height: 40px;
+  /*Colocando isso pra parecer que é um botão quando passamos o mouse*/
+  cursor: pointer;
+}
